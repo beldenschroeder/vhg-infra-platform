@@ -8,6 +8,7 @@ terraform {
 
 data "terraform_remote_state" "infrastructure" {
   backend = "s3"
+  workspace = "vhg-infra-platform"
 
   config = {
     region = "${var.region}"
